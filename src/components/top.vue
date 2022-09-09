@@ -1,7 +1,8 @@
 <template>
-           <nav class="navbar navbar-expand-lg bg-primary navbar-dark fixed-top">
+    <!-- shadow 阴影 bg-gradient 渐变 -->
+           <nav class="navbar navbar-expand-lg bg-gradient shadow bg-primary navbar-dark fixed-top">
             <div class="container">
-                <a href="#" class="navbar-brand">BIGC-EXHIBITION</a>
+                <a href="#" class="navbar-brand text-warning  fs-3">BIGC-EXHIBITION</a>
                 <button
                     class="navbar-toggler"
                     type="button"
