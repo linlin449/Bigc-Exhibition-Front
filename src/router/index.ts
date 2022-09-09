@@ -8,5 +8,18 @@ export default createRouter({
             path: "/",
             name: "Home",
             component: () => import("@/views/home/index.vue"),
-        }]
+        },
+        {
+            // 活动
+            path: "/activity",
+            name: "Activity",
+            component: () => import("@/views/activity/index.vue"),
+        },
+        {
+            // 留言
+            path: "/comment",
+            name: "Comment",
+            component: () => import("@/views/comment/index.vue"),
+        },
+    ]
 })

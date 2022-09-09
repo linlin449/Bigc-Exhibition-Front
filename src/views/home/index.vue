@@ -1,12 +1,13 @@
 <template>
-    <Top/>
-    <Index/>
+    <Top />
+    <Main />
 </template>
 
 <script lang="ts" setup>
-import Top from "@/views/home/components/top.vue"
-import Index from "@/views/home/components/content/index.vue"
+import Top from "@/components/top.vue"
+import Main from "./main.vue";
 </script>
 
 <style scoped>
+
 </style>
