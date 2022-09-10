@@ -1,11 +1,14 @@
 <template>
     <Top />
-    <Main />
+    <router-view></router-view>
 </template>
 
 <script lang="ts" setup>
 import Top from "@/components/top.vue"
-import Main from "./main.vue";
+import { onMounted } from "vue";
+onMounted(()=>{
+    
+})
 </script>
 
 <style scoped>

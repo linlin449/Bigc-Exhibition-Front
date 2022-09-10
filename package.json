@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
+    "bootstrap-icons": "^1.9.1",
     "jquery": "^3.6.1",
     "pinia": "^2.0.21",
     "scss": "^0.2.4",

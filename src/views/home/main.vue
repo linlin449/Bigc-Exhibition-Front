@@ -13,11 +13,12 @@
                         tenetur? Veniam, ipsum consectetur?
                     </p>
                     <div class="pt-5">
-                    <button class="btn btn-light btn-lg">加入我们</button>
-                    <button class="btn mx-5 btn-warning btn-lg">参加活动</button>
+                        <button @click="joinUs" class="btn btn-light btn-lg">加入我们</button>
+                        <router-link to="/activity"><button class="btn mx-5 btn-warning btn-lg">参加活动 </button>
+                        </router-link>
+                    </div>
                 </div>
-                </div>
-                <img src="/vite.svg" alt="vite" class="w-50 d-none d-md-block" />
+                <img :src="icon" alt="vite" class="w-50 d-none d-md-block" />
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -26,7 +27,7 @@
             </path>
         </svg>
     </section>
-    <section class=" text-light">
+    <section class="text-light">
         <div class="container">
             <h3 class="mb-3 text-dark text-center">注册账号开始学习之旅</h3>
             <div class="heading-line"></div>
@@ -41,39 +42,12 @@
     <section class="p-5">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md">
-                    <div class="card  ">
+                <div v-for="activity in activitis" class="col-md">
+                    <div class="card">
                         <div class="card-body text-center">
-                            <div class="card-title">光学知识</div>
-                            <div class="card-text ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ab
-                                maiores consequatur aliquam, quia doloremque. Eius laborum id ducimus amet porro,
-                                dolorum,
-                                officiis consectetur vero rerum quam eum consequuntur sapiente.</div>
-                            <a href="#" class="btn btn-warning mt-2">学习光学</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card ">
-                        <div class="card-body text-center">
-                            <div class="card-title">力学知识</div>
-                            <div class="card-text ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ab
-                                maiores consequatur aliquam, quia doloremque. Eius laborum id ducimus amet porro,
-                                dolorum,
-                                officiis consectetur vero rerum quam eum consequuntur sapiente.</div>
-                            <a href="#" class="btn btn-warning mt-2">学习力学</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="card  ">
-                        <div class="card-body text-center">
-                            <div class="card-title">电学知识</div>
-                            <div class="card-text ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni ab
-                                maiores consequatur aliquam, quia doloremque. Eius laborum id ducimus amet porro,
-                                dolorum,
-                                officiis consectetur vero rerum quam eum consequuntur sapiente.</div>
-                            <a href="#" class="btn btn-warning mt-2">学习电学</a>
+                            <div class="card-title">{{activity.name}}</div>
+                            <div class="card-text ">{{activity.content}}</div>
+                            <a @click="handelSelect(activity.index)" class="btn btn-warning mt-2">点击进入</a>
                         </div>
                     </div>
                 </div>
@@ -82,12 +56,10 @@
     </section>
     <section class="mt-5 bg-primary bg-gradient text-light text-center text-sm-start">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path
-                    fill="#fff"
-                    fill-opacity="1"
-                    d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-                ></path>
-            </svg>
+            <path fill="#fff" fill-opacity="1"
+                d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z">
+            </path>
+        </svg>
         <div class="container">
             <div class="row align-items-center justify-content-between">
                 <div class="col-md">
@@ -137,15 +109,39 @@
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path
-                    fill="#fff"
-                    fill-opacity="1"
-                    d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                ></path>
-            </svg>
+            <path fill="#fff" fill-opacity="1"
+                d="M0,96L48,128C96,160,192,224,288,213.3C384,203,480,117,576,117.3C672,117,768,203,864,202.7C960,203,1056,117,1152,117.3C1248,117,1344,203,1392,245.3L1440,288L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
     </section>
 </template>
 <script lang="ts" setup>
+import { RouteRecordName, useRouter } from 'vue-router';
+import { onMounted, reactive, Ref, ref } from 'vue';
+const router = useRouter()
+interface Iactivity {
+    name: String
+    index: RouteRecordName | undefined
+    content: String
+}
+const activitis: Ref<Iactivity[]> = ref([{
+    name: "光学知识", index: "one", content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Magni abmaiores consequatur aliquam, quia doloremque.Eius laborum id ducimus amet porro,dolorum,officiis consectetur vero rerum quam eum consequuntur sapiente."
+}, {
+    name: "光学知识", index: "one", content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Magni abmaiores consequatur aliquam, quia doloremque.Eius laborum id ducimus amet porro,dolorum,officiis consectetur vero rerum quam eum consequuntur sapiente."
+},
+{
+    name: "光学知识", index: "one", content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Magni abmaiores consequatur aliquam, quia doloremque.Eius laborum id ducimus amet porro,dolorum,officiis consectetur vero rerum quam eum consequuntur sapiente."
+}])
+// TODO 图片更换
+const icon = ref("/vite.svg")
+// TODO 路由跳转到对应的活动界面
+let handelSelect = (index: String) => {
+    console.log(index)
+}
+// TODO 加入方式
+let joinUs = () => {
+
+}
 </script>
     
 <style scoped lang="scss">
