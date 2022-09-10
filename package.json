@@ -9,11 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-  
-=======
     "@popperjs/core": "^2.11.6",
->>>>>>> f75d41c4612cea9b53c9f04db5340776ea7b430b
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
     "bootstrap-icons": "^1.9.1",
