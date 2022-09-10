@@ -135,7 +135,7 @@ const activitis: Ref<Iactivity[]> = ref([{
 // TODO 图片更换
 const icon = ref("/vite.svg")
 // TODO 路由跳转到对应的活动界面
-let handelSelect = (index: String) => {
+let handelSelect = (index: RouteRecordName | undefined) => {
     console.log(index)
 }
 // TODO 加入方式
