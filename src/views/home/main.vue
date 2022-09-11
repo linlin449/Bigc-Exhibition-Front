@@ -120,9 +120,9 @@ import { RouteRecordName, useRouter } from 'vue-router';
 import { onMounted, reactive, Ref, ref } from 'vue';
 const router = useRouter()
 interface Iactivity {
-    name: String
+    name: string
     index: RouteRecordName | undefined
-    content: String
+    content: string
 }
 const activitis: Ref<Iactivity[]> = ref([{
     name: "光学知识", index: "one", content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Magni abmaiores consequatur aliquam, quia doloremque.Eius laborum id ducimus amet porro,dolorum,officiis consectetur vero rerum quam eum consequuntur sapiente."

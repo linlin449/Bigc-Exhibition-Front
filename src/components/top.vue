@@ -24,10 +24,10 @@ import { onMounted,ref,Ref } from 'vue';
 const router = useRouter()
 let active:Ref<Boolean>=ref(true)
 interface Iitem{
-    name:String
+    name:string
     index:RouteRecordName | undefined
-    icon:String
-    active:Boolean
+    icon:string
+    active:boolean
 }
 let items:Ref<Iitem[]> = ref([{ name: "首页", index: "Home" ,icon:"bi-house-heart",active:false},
                 { name: "活动", index: "Activity",icon:"bi-dribbble",active:false },
