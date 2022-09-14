@@ -48,7 +48,6 @@ const router = useRouter()
 const imgsrc: Ref<string> = ref("src/assets/bg.jpeg")
 </script>
 <style scoped lang="scss">
-@import "@/assets/scss/main.scss";
 .card{
   border-radius: 1rem;
 }

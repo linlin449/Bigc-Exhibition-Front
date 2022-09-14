@@ -43,7 +43,6 @@ onMounted(() => {
 })
 </script>
 <style scoped lang="scss">
-@import "@/assets/scss/main.scss";
 #navmenu {
     cursor: pointer;
 }

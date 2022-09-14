@@ -57,7 +57,6 @@ import 'animate.css';
 </script>
 <style scoped lang="scss">
 
-@import "@/assets/scss/main.scss";
  .bgdiv{
         background-repeat: no-repeat;
         background-image: url("@/assets/bg.jpeg")
