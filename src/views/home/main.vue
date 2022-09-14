@@ -1,5 +1,5 @@
 <template>
-    <section class="pt-7  bg-primary bg-gradient text-center text-light text-sm-start">
+    <section class="pt-5  bg-primary bg-gradient text-center text-light text-sm-start">
         <div class="container">
             <div class="pt-5 d-md-flex align-items-center">
                 <img src="/vite.svg" alt="vite" class="w-50 d-md-none mb-2" />

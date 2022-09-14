@@ -1,13 +1,13 @@
 <template>
     <!-- shadow 阴影 bg-gradient 渐变 -->
-    <nav class="navbar navbar-expand-lg bg-gradient shadow bg-primary navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg bg-gradient shadow bg-primary navbar-dark ">
         <div class="container">
             <a href="#" class="navbar-brand text-warning  fs-3">BIGC-EXHIBITION</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse ms-5" id="navmenu">
+            <div class="collapse navbar-collapse ms-5"  id="navmenu">
                 <ul class="navbar-nav ">
                     <!--margin start = margin left-->
                     <li v-for="item in items" class="nav-item  px-5 fs-5 text-light" style="border-radius:1rem;">
@@ -22,7 +22,6 @@
 import { RouteRecordName, useRouter } from 'vue-router';
 import { onMounted,ref,Ref } from 'vue';
 const router = useRouter()
-let active:Ref<Boolean>=ref(true)
 interface Iitem{
     name:string
     index:RouteRecordName | undefined
