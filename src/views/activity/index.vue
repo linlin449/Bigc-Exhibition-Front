@@ -7,7 +7,8 @@
           <h5 class="card-title">Card title</h5>
           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
             content. This content is a little bit longer.</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>  
+          <button class="btn btn-primary btn-lg" @click='getDetail("ActivityDetail")'>点击了解更多</button>
         </div>
       </div>
       <div class="col-md-8 ">
@@ -46,6 +47,9 @@ import { RouteRecordName, useRouter } from 'vue-router';
 import { onMounted, Ref, ref } from 'vue';
 const router = useRouter()
 const imgsrc: Ref<string> = ref("src/assets/bg.jpeg")
+let getDetail=(index:RouteRecordName)=>{
+  router.push({name:index})
+}
 </script>
 <style scoped lang="scss">
 .card{

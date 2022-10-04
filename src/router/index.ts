@@ -27,6 +27,12 @@ export default createRouter({
                     name: "Comment",
                     component: () => import("@/views/comment/index.vue"),
                 },
+                {
+                    // 活动
+                    path: "/activitydetail",
+                    name: "ActivityDetail",
+                    component: () => import("@/views/activity/detail.vue"),
+                },
             ]
         },
         {
@@ -35,5 +41,6 @@ export default createRouter({
             name: "Login",
             component: () => import("@/views/admin/login.vue"),
         },
+        
     ]
 })

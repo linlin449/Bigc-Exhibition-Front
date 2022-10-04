@@ -7,7 +7,7 @@
 import Top from "@/components/top.vue"
 import { onMounted } from "vue";
 onMounted(()=>{
-    
+        
 })
 </script>
 
